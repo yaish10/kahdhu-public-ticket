@@ -266,6 +266,91 @@ body.tp-body {
   .tp { width: calc(100% - 20px); margin: 16px auto 36px; }
 }
 
+/* Pay outstanding */
+.tp-pay {
+  margin-top: 14px; background: #fff; border: 1px solid #e1e8f5; border-radius: 18px;
+  padding: 16px; box-shadow: 0 10px 24px -20px rgba(15, 23, 42, .35);
+}
+.tp-pay-head { display: flex; gap: 14px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
+.tp-pay-head h2 { margin: 0 0 4px; font-size: 17px; letter-spacing: -.02em; }
+.tp-pay-head p { margin: 0; color: #64748b; font-size: 13.5px; max-width: 46ch; }
+.tp-pay-cta {
+  border: 0; border-radius: 14px; padding: 12px 16px; font: inherit; font-size: 14.5px; font-weight: 800;
+  color: #fff; cursor: pointer; background: linear-gradient(135deg, #0b5ed7, #0ea5e9);
+  box-shadow: 0 14px 28px -16px rgba(11, 94, 215, .75);
+}
+.tp-pay-cta:disabled { opacity: .55; cursor: default; }
+.tp-pay-panel { margin-top: 14px; display: grid; gap: 12px; }
+.tp-pay-h { margin: 4px 0 0; font-size: 13px; color: #475569; text-transform: uppercase; letter-spacing: .04em; }
+.tp-pay-none { margin: 0; color: #b45309; background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px; padding: 12px 14px; }
+.tp-accts { display: grid; gap: 10px; }
+.tp-acct {
+  display: flex; gap: 12px; align-items: center; padding: 14px; border-radius: 16px;
+  border: 2px solid #e3e9f6; background: #f8faff; cursor: pointer;
+}
+.tp-acct.on { border-color: #0b5ed7; background: linear-gradient(135deg, #f5f9ff, #eef9ff); }
+.tp-bk {
+  width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
+  background: #dbeafe; color: #0b3a8a; flex: none;
+}
+.tp-bk svg { width: 20px; height: 20px; }
+.tp-ai { min-width: 0; flex: 1; }
+.tp-ai strong { display: block; }
+.tp-ai small, .tp-ai em { display: block; color: #64748b; font-size: 12.5px; font-style: normal; }
+.tp-ai code { display: inline-block; margin-top: 4px; font-weight: 800; letter-spacing: .02em; }
+.tp-copy {
+  border: 1px solid #dbe5f4; background: #fff; border-radius: 999px; padding: 8px 12px;
+  display: inline-flex; gap: 6px; align-items: center; font: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer;
+}
+.tp-copy svg { width: 14px; height: 14px; }
+.tp-copy.ok { color: #15803d; border-color: #bbf7d0; background: #f0fdf4; }
+.tp-drop {
+  display: grid; justify-items: center; gap: 4px; text-align: center; padding: 20px 16px;
+  border: 2px dashed #c7d2fe; border-radius: 18px; background: #f8faff; cursor: pointer;
+}
+.tp-drop.over, .tp-drop:hover { background: #eef2ff; border-color: #0b5ed7; }
+.tp-drop input { display: none; }
+.tp-drop svg { width: 22px; height: 22px; color: #0b5ed7; }
+.tp-drop strong { font-size: 14.5px; color: #0b1f44; }
+.tp-drop small { color: #64748b; font-size: 12.5px; }
+.tp-prev { position: relative; border-radius: 14px; overflow: hidden; border: 1px solid #e1e8f5; }
+.tp-prev img { display: block; width: 100%; max-height: 220px; object-fit: contain; background: #0b1f44; }
+.tp-prog {
+  position: absolute; left: 12px; right: 12px; bottom: 12px; background: rgba(255,255,255,.92);
+  border-radius: 999px; padding: 6px 10px; display: flex; gap: 8px; align-items: center; font-size: 12px; font-weight: 700;
+}
+.tp-prog i { display: block; height: 6px; border-radius: 99px; background: #0b5ed7; flex: 1; max-width: 55%; }
+.tp-read h3 { margin: 8px 0; font-size: 14px; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.tp-read h3 small { color: #64748b; font-weight: 600; }
+.tp-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
+.tp-fld { display: grid; gap: 4px; font-size: 12.5px; font-weight: 700; color: #475569; }
+.tp-fld input, .tp-fld select {
+  border: 1.5px solid #e3e9f6; border-radius: 12px; padding: 10px 12px; font: inherit; font-size: 14px; color: #0b1f44; background: #fff;
+}
+.tp-checks { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; }
+.tp-checks li {
+  display: flex; gap: 9px; align-items: flex-start; padding: 9px 11px; border-radius: 12px;
+  font-size: 13px; line-height: 1.35; font-weight: 600;
+}
+.tp-checks i { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; flex: none; }
+.tp-checks i svg { width: 12px; height: 12px; }
+.tp-checks .pass { background: #f0fdf4; color: #14532d; }
+.tp-checks .pass i { background: #bbf7d0; color: #15803d; }
+.tp-checks .warn { background: #fffbeb; color: #78350f; }
+.tp-checks .warn i { background: #fde68a; color: #b45309; }
+.tp-checks .fail { background: #fef2f2; color: #7f1d1d; }
+.tp-checks .fail i { background: #fecaca; color: #b91c1c; }
+.tp-pay-msg { margin: 0; min-height: 1.2em; color: #64748b; font-size: 13px; font-weight: 600; }
+.tp-pay-msg.err { color: #b91c1c; }
+.tp-pay-msg.ok { color: #15803d; }
+.tp-pay-res {
+  border-radius: 14px; padding: 14px 16px; display: grid; gap: 4px; margin-bottom: 10px;
+}
+.tp-pay-res strong { font-size: 16px; }
+.tp-pay-res.verified, .tp-pay-res.ok { background: #f0fdf4; color: #14532d; border: 1px solid #bbf7d0; }
+.tp-pay-res.review { background: #fffbeb; color: #78350f; border: 1px solid #fde68a; }
+.tp-pay-res.rejected { background: #fef2f2; color: #7f1d1d; border: 1px solid #fecaca; }
+
   </style>
 </head>
 <body class="tp-body">
@@ -282,6 +367,152 @@ body.tp-body {
     );
   </script>
   <script>
+/* Bank transfer slip reader: OCR in the browser (Tesseract.js), then rules tuned for Maldives Islamic Bank (MIB) and Bank of Maldives (BML) slips.
+   read(file, onProgress) -> {fields, text}; check(fields, expected) -> [{key, level: pass|warn|fail, msg}].
+   The same checks run again on the server in submit_payment_slip(); the browser result is only a convenience. */
+(function () {
+  var LIB = "https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js";
+  var libP = null, worker = null;
+  function loadLib() {
+    if (window.Tesseract) return Promise.resolve();
+    if (!libP) libP = new Promise(function (ok, fail) {
+      var s = document.createElement("script"); s.src = LIB; s.onload = ok; s.onerror = function () { libP = null; fail(new Error("Could not load the slip reader. Check your connection.")); };
+      document.head.appendChild(s);
+    });
+    return libP;
+  }
+  function pad(n) { return n < 10 ? "0" + n : String(n); }
+
+  /* ---------- image preparation: scale up, grey, flip dark slips to dark-on-light ---------- */
+  function prepare(file) {
+    return new Promise(function (ok, fail) {
+      var url = URL.createObjectURL(file), img = new Image();
+      img.onload = function () {
+        var w = img.naturalWidth, h = img.naturalHeight, k = Math.max(1, Math.min(3, 1600 / w));
+        var c = document.createElement("canvas"); c.width = Math.round(w * k); c.height = Math.round(h * k);
+        var x = c.getContext("2d", { willReadFrequently: true }); x.fillStyle = "#fff"; x.fillRect(0, 0, c.width, c.height); x.drawImage(img, 0, 0, c.width, c.height);
+        var d = x.getImageData(0, 0, c.width, c.height), p = d.data, i, sum = 0, n = p.length / 4;
+        for (i = 0; i < p.length; i += 4) { var g = (p[i] * 0.299 + p[i + 1] * 0.587 + p[i + 2] * 0.114); p[i] = p[i + 1] = p[i + 2] = g; sum += g; }
+        var dark = sum / n < 120;
+        for (i = 0; i < p.length; i += 4) {
+          var v = dark ? 255 - p[i] : p[i];
+          v = v < 110 ? v * 0.55 : v > 200 ? 255 : v;   // a little contrast
+          p[i] = p[i + 1] = p[i + 2] = v;
+        }
+        x.putImageData(d, 0, 0); URL.revokeObjectURL(url); ok({ canvas: c, dark: dark });
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); fail(new Error("That file is not a readable image.")); };
+      img.src = url;
+    });
+  }
+
+  function ocr(canvas, onProgress) {
+    return loadLib().then(function () {
+      var p = worker ? Promise.resolve(worker) : window.Tesseract.createWorker("eng", 1, { logger: function (m) { if (onProgress && m.status === "recognizing text") onProgress(m.progress); } }).then(function (w) { worker = w; return w; });
+      return p.then(function (w) { return w.setParameters({ tessedit_pageseg_mode: "6", preserve_interword_spaces: "1" }).then(function () { return w.recognize(canvas); }); });
+    }).then(function (r) { return r.data.text || ""; });
+  }
+
+  /* ---------- text -> fields ---------- */
+  function norm(s) { return String(s || "").replace(/[|¦]/g, "I").replace(/[ \t]+/g, " ").trim(); }
+  function digitsFix(s) { return String(s).replace(/[Oo]/g, "0").replace(/[Il]/g, "1").replace(/\s+/g, ""); }
+  function iso(y, mo, d, h, mi, s) { return y + "-" + pad(+mo) + "-" + pad(+d) + " " + pad(+h) + ":" + pad(+mi) + ":" + pad(+(s || 0)); }
+  var LABEL = /^(from|to|bank|created date|status date|status|message|reference|transaction\s*(date|type|#)|processed date|remarks|amount|id\s*#?|date)\b/i;
+
+  function findDate(lines) {
+    var rx1 = /(\d{4})-(\d{2})-(\d{2})[ T]+(\d{1,2}):(\d{2})(?::(\d{2}))?/, rx2 = /(\d{1,2})\s*[\/.\-]\s*(\d{1,2})\s*[\/.\-]\s*(\d{4})[ ,T]+(\d{1,2}):(\d{2})(?::(\d{2}))?/;
+    var order = lines.filter(function (l) { return /(created|transaction)\s*date/i.test(l); }).concat(lines.filter(function (l) { return /date/i.test(l); }), lines), i, m;
+    for (i = 0; i < order.length; i++) {
+      if ((m = rx1.exec(order[i]))) return iso(m[1], m[2], m[3], m[4], m[5], m[6]);
+      if ((m = rx2.exec(order[i]))) return iso(m[3], m[2], m[1], m[4], m[5], m[6]);   // Bank of Maldives writes day/month/year
+    }
+    return "";
+  }
+  function section(lines, labelRx) {
+    var i, out = [];
+    for (i = 0; i < lines.length; i++) if (labelRx.test(lines[i])) break;
+    if (i >= lines.length) return null;
+    out.push(lines[i].replace(labelRx, "").trim());
+    for (var j = i + 1; j < lines.length && j <= i + 2; j++) { if (LABEL.test(lines[j])) break; out.push(lines[j]); }
+    return out.join(" ").trim();
+  }
+  function accountAndName(chunk) {
+    if (!chunk) return { no: "", name: "" };
+    var m = chunk.match(/[\dOoIl][\dOoIl ]{7,22}[\dOoIl]/), no = m ? digitsFix(m[0]) : "";
+    var name = chunk.replace(m ? m[0] : "", "").replace(/[^A-Za-z.' \-]/g, " ").replace(/\s+/g, " ").replace(/(^| )[A-Za-z]( |$)/g, " ").trim();
+    return { no: /^\d{8,}$/.test(no) ? no : "", name: name };
+  }
+  function parse(text) {
+    var lines = String(text || "").split(/\r?\n/).map(norm).filter(Boolean), all, f = {};
+    // The OCR sometimes splits a wide label ("To") into "T ... o" on two lines; put it back together.
+    lines = lines.reduce(function (acc, l) { if (acc.length && /^o$/i.test(l) && /^T\s+\S/.test(acc[acc.length - 1])) acc[acc.length - 1] = "To " + acc[acc.length - 1].slice(1).trim(); else acc.push(l); return acc; }, []);
+    all = lines.join("\n");
+    f.bank = /islamic/i.test(all) ? "MIB" : /bank of maldives/i.test(all) ? "BML" : /favara|dhathuru/i.test(all) ? "MIB" : /BLAZ\w{6,}/i.test(all) ? "BML" : "";
+    f.status = /(success|completed|successful)/i.test(all) ? "SUCCESS" : /(fail|reject|declin|unsuccess)/i.test(all) ? "FAILED" : "";
+    // amount: the line that says Amount, else the first MVR figure
+    var amtRx = /(?:MVR|USD|Rf\.?)\s*([\d,]+\.\d{2})|([\d,]+\.\d{2})\s*(MVR|USD)/i, m, cand = null;
+    lines.forEach(function (l) { if (!cand && /^amount\b/i.test(l) && (m = amtRx.exec(l))) cand = m; });
+    if (!cand) lines.forEach(function (l) { if (!cand && (m = amtRx.exec(l))) cand = m; });
+    if (!cand && (m = all.match(/([\d,]+\.\d{2})/))) cand = [m[0], m[1]];
+    if (cand) { f.amount = String(cand[1] || cand[2]).replace(/,/g, ""); f.currency = (/USD/i.test(cand[0]) ? "USD" : "MVR"); }
+    // reference
+    var ref = all.match(/\b(?:Id|Transaction|Trans|Txn)\s*(?:No\.?)?\s*#\s*[:\-]?\s*([0-9OoIl]{6,})/i) || all.match(/\bId\s*#?\s*[:\-]?\s*([0-9OoIl]{6,})/i) || all.match(/Reference\s*(?:No\.?)?\s*[:\-]?\s*([A-Z0-9]{8,})/i) || all.match(/\b(BLAZ[A-Z0-9]{8,})/);
+    if (ref) f.reference_no = /^[0-9OoIl]+$/.test(ref[1]) ? digitsFix(ref[1]) : ref[1].toUpperCase();
+    f.transaction_date = findDate(lines);
+    // MIB to MIB slips say "Quick Transfer"; MIB to another bank goes over Favara and the slip names the receiving bank.
+    var tt = all.match(/Transaction\s*Type\s+([A-Za-z ]{3,30})/i);
+    f.transaction_type = /favara/i.test(all) ? "Favara Transfer" : tt ? tt[1].trim() : (f.bank === "BML" ? "BML Transfer" : "Transfer");
+    var bl = lines.filter(function (l) { return /^bank\s+\S/i.test(l) && !/^bank of maldives/i.test(l); })[0];
+    if (bl && f.bank === "MIB") { var v = bl.replace(/^bank\s+/i, ""); f.to_bank = /islamic|mib/i.test(v) ? "MIB" : /maldives|bml/i.test(v) ? "BML" : v.trim(); }
+    var to = accountAndName(section(lines, /^to\b\s*/i)), from = accountAndName(section(lines, /^from\b\s*/i));
+    f.to_account = to.no; f.to_name = to.name; f.from_account = from.no; f.from_name = from.name;
+    if (!f.to_account) {   // no readable "To" block: take a long number that is not the sender's
+      var nums = (all.match(/\b\d{9,20}\b/g) || []).filter(function (n) { return n !== f.from_account && n !== f.reference_no; });
+      if (nums.length) f.to_account = nums[nums.length - 1];
+    }
+    return f;
+  }
+
+  /* ---------- checks (mirrors submit_payment_slip in 0114) ---------- */
+  function maldivesNow() { return Date.now(); }
+  function toMs(s) { var m = /^(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})$/.exec(s || ""); return m ? Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4] - 5, +m[5], +m[6]) : null; }   // Maldives is UTC+5, no daylight saving
+  function check(f, ex) {
+    var out = [], a, b, d;
+    function add(key, level, msg) { out.push({ key: key, level: level, msg: msg }); }
+    if (!f.status) add("status", "warn", "Could not read the transfer status."); else if (/succ|compl/i.test(f.status)) add("status", "pass", "Transfer completed."); else add("status", "fail", "The slip does not show a completed transfer.");
+    var amt = f.amount ? Number(f.amount) : null;
+    var amountLabel = ex.amountLabel || "plan price";
+    var matchLabel = ex.matchLabel || "matches the plan.";
+    var beforeLabel = ex.beforeLabel || "this renewal was started.";
+    var afterLabel = ex.afterLabel || "Transfer made after the renewal started.";
+    if (amt == null || isNaN(amt)) add("amount", "warn", "Could not read the amount.");
+    else if (amt + 0.005 < ex.amount) add("amount", "fail", "Slip amount " + amt.toFixed(2) + " is less than the " + amountLabel + " " + Number(ex.amount).toFixed(2) + ".");
+    else if (f.currency && ex.currency && f.currency !== ex.currency) add("amount", "fail", "Slip currency is not " + ex.currency + ".");
+    else add("amount", "pass", "Amount " + amt.toFixed(2) + " " + (ex.currency || "") + " " + matchLabel);
+    a = String(f.to_account || "").replace(/[^0-9A-Za-z]/g, "").toUpperCase(); b = String(ex.account_no || "").replace(/[^0-9A-Za-z]/g, "").toUpperCase();
+    if (!a) add("account", "warn", "Could not read the receiving account.");
+    else if (a === b) add("account", "pass", "Paid into " + ex.bank + " " + ex.account_no + ".");
+    else { d = 0; for (var i = 0; i < Math.min(a.length, b.length); i++) if (a[i] !== b[i]) d++; if (a.length === b.length && d <= 1) add("account", "warn", "The receiving account is one character off " + ex.account_no + ". Check the slip."); else add("account", "fail", "The slip shows account " + f.to_account + ", not " + ex.account_no + "."); }
+    var exBank = /islamic|mib/i.test(ex.bank || "") ? "MIB" : /maldives|bml/i.test(ex.bank || "") ? "BML" : "";
+    if (f.to_bank && exBank && f.to_bank !== exBank) add("bank", "warn", "The slip says the money went to " + f.to_bank + ", but this account is at " + exBank + ".");
+    var t = toMs(f.transaction_date), c = ex.createdAt ? new Date(ex.createdAt).getTime() : null;
+    if (t == null) add("date", "warn", "Could not read the transfer date and time.");
+    else if (c != null && t < c - 15 * 60000) add("date", "fail", "The transfer was made before " + beforeLabel);
+    else if (t > maldivesNow() + 15 * 60000) add("date", "fail", "The transfer time is in the future.");
+    else add("date", "pass", afterLabel);
+    if (!f.reference_no) add("reference", "warn", "Could not read the reference number."); else add("reference", "pass", "Reference " + f.reference_no + " read.");
+    return out;
+  }
+  function verdict(checks) { return checks.some(function (c) { return c.level === "fail"; }) ? "rejected" : checks.some(function (c) { return c.level === "warn"; }) ? "review" : "verified"; }
+
+  function read(file, onProgress) {
+    return prepare(file).then(function (p) { return ocr(p.canvas, onProgress); }).then(function (text) { return { text: text, fields: parse(text) }; });
+  }
+  window.VeyoraSlip = { read: read, parse: parse, check: check, verdict: verdict };
+})();
+
+  </script>
+  <script>
 /* Public ticket view for SMS links — same ticket card UI as Finance/Operations. */
 (function () {
   var db = window.veyoraDb;
@@ -290,6 +521,14 @@ body.tp-body {
 
   var WAVE = '<svg viewBox="0 0 64 40"><path d="M2 32C14 8 34 4 58 8 46 12 38 22 30 30 22 38 10 40 2 32Z" fill="#2d8cf0"/><path d="M20 36c10-8 22-8 34-14-4 9-14 16-34 14Z" fill="#0b5ed7"/></svg>';
   var CHECK = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="m7.5 12.5 3 3 6-6.5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var ICO = {
+    bank: '<path d="M3 10 12 4l9 6M5 10v8h14v-8M2 20h20M9 14v4M15 14v4"/>',
+    up: '<path d="M12 16V6M8 10l4-4 4 4M5 20h14"/>',
+    copy: '<rect x="8" y="8" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/>',
+    ok: '<path d="m6 12 4 4 8-8"/>',
+    warn: '<path d="M12 8v5M12 17h.01"/><path d="M10.3 4.3 2.8 18a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0Z"/>',
+    fail: '<circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/>'
+  };
   var P = {
     cal: '<path d="M5 5h14v15H5zM5 10h14M9 3v4M15 3v4"/>',
     clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
@@ -309,7 +548,6 @@ body.tp-body {
   function ic(p) {
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + p + "</svg>";
   }
-  function pad(n) { return n < 10 ? "0" + n : "" + n; }
   function q(name) {
     try { return new URLSearchParams(location.search).get(name) || ""; } catch (e) { return ""; }
   }
@@ -350,6 +588,28 @@ body.tp-body {
     if (/part/i.test(pay) || paid > 0) return "part";
     return "unpaid";
   }
+  function slipLib() {
+    if (window.VeyoraSlip) return Promise.resolve(window.VeyoraSlip);
+    function load(src) {
+      return new Promise(function (ok, fail) {
+        var s = document.createElement("script");
+        s.src = src;
+        s.onload = function () { window.VeyoraSlip ? ok(window.VeyoraSlip) : fail(new Error("Slip reader missing.")); };
+        s.onerror = function () { fail(new Error("Could not load the slip reader.")); };
+        document.head.appendChild(s);
+      });
+    }
+    return load("slip-ocr.js?v=20261108pay1").catch(function () {
+      return load("https://cdn.jsdelivr.net/gh/yaish10/kahdhu-public-ticket@main/slip-ocr.js?v=20261108pay1");
+    });
+  }
+  function checksHtml(checks) {
+    if (!checks || !checks.length) return "";
+    return '<ul class="tp-checks">' + checks.map(function (c) {
+      var ico = c.level === "pass" ? ICO.ok : c.level === "warn" ? ICO.warn : ICO.fail;
+      return '<li class="' + esc(c.level) + '"><i>' + ic(ico) + '</i><span>' + esc(c.msg) + '</span></li>';
+    }).join("") + "</ul>";
+  }
 
   var ref = q("r").trim();
   var token = q("k").trim().toLowerCase();
@@ -358,19 +618,17 @@ body.tp-body {
     return;
   }
 
-  db.rpc("public_ticket_view", {
-    p_host: location.hostname,
-    p_ref: ref,
-    p_token: token
-  }).then(function (r) {
-    if (r.error) {
-      var miss = /public_ticket_view|schema cache|does not exist/i.test(r.error.message || "");
-      msg("Could not open ticket", miss ? "Run migration 0151_public_ticket_card_fields.sql, then try again." : r.error.message, "bad");
-      return;
-    }
-    var d = r.data || {};
-    if (!d.ok) {
-      msg("Ticket not found", d.error || "This ticket link is not valid.", "bad");
+  function loadTicket() {
+    return db.rpc("public_ticket_view", {
+      p_host: location.hostname,
+      p_ref: ref,
+      p_token: token
+    });
+  }
+
+  function render(d) {
+    if (!d || !d.ok) {
+      msg("Ticket not found", (d && d.error) || "This ticket link is not valid.", "bad");
       return;
     }
 
@@ -378,12 +636,14 @@ body.tp-body {
     var b = d.booking || {};
     var t = d.trip || {};
     var pax = Array.isArray(d.passengers) ? d.passengers : [];
+    var pay = d.pay || {};
     var lg = logoUrl(co.logo_path);
     var dep = t.depart_at ? new Date(t.depart_at) : null;
     var kind = payKind(b);
     var total = Number(b.fare_total) || 0;
     var paid = Number(b.paid_amount) || 0;
-    var due = kind === "ref" ? 0 : Math.max(0, total - paid);
+    var due = Number(pay.amount_due != null ? pay.amount_due : Math.max(0, total - paid)) || 0;
+    if (kind === "ref") due = 0;
     var seats = pax.map(function (p) { return p.seat_no; }).filter(Boolean);
     var name = b.contact_name || (pax[0] && pax[0].full_name) || "Passenger";
     var phone = b.contact_phone || "";
@@ -457,11 +717,233 @@ body.tp-body {
       }).join("") : '<li><div><strong>No passenger names yet</strong><em>Contact the operator if this looks wrong.</em></div></li>') +
       '</ul></section>';
 
-    root.innerHTML = head + card + paxBlock +
+    var payBlock = "";
+    if (pay.can_pay && due > 0) {
+      payBlock = '<section class="tp-pay" id="tpPay">' +
+        '<div class="tp-pay-head"><div><h2>Pay outstanding</h2><p>Transfer ' + esc(money(due)) + ' to this company, then upload your bank slip. We scan it the same way as KAHDHU subscription payments.</p></div>' +
+          '<button type="button" class="tp-pay-cta" id="tpPayOpen">Pay outstanding · ' + esc(money(due)) + '</button></div>' +
+        '<div id="tpPayPanel" class="tp-pay-panel" hidden></div></section>';
+    } else if (pay.slip && pay.slip.status && pay.slip.status !== "none") {
+      var st = pay.slip.status;
+      payBlock = '<section class="tp-pay"><div class="tp-pay-res ' + esc(st) + '"><strong>' +
+        (st === "verified" || pay.slip.applied ? "Payment received" : st === "review" ? "Slip under review" : "Slip not accepted") +
+        '</strong><span>' +
+        (st === "verified" || pay.slip.applied ? "This ticket is marked paid." : st === "review" ? "The company will check your slip shortly." : "Upload a clearer slip or pay into the correct company account.") +
+        '</span></div>' + checksHtml(pay.slip.checks || []) +
+        (st === "rejected" ? '<button type="button" class="tp-pay-cta" id="tpPayOpen">Try again</button>' : "") +
+        '</section>';
+    }
+
+    root.innerHTML = head + card + paxBlock + payBlock +
       '<p class="tp-foot">This page only shows your booking. It does not open company staff tools.</p>';
-  }).catch(function (e) {
-    msg("Could not open ticket", (e && e.message) || "Try again later.", "bad");
-  });
+
+    var openBtn = document.getElementById("tpPayOpen");
+    if (openBtn) openBtn.addEventListener("click", function () { openPay(d); });
+  }
+
+  function openPay(d) {
+    var panel = document.getElementById("tpPayPanel");
+    var openBtn = document.getElementById("tpPayOpen");
+    if (!panel) return;
+    if (openBtn) openBtn.hidden = true;
+    panel.hidden = false;
+
+    var S = {
+      accounts: (d.pay && d.pay.accounts) || [],
+      acct: null,
+      file: null,
+      preview: "",
+      fields: null,
+      checks: [],
+      reading: 0,
+      busy: false,
+      booking: d.booking || {},
+      company: d.company || {},
+      due: Number(d.pay && d.pay.amount_due) || 0,
+      currency: (d.pay && d.pay.currency) || "MVR"
+    };
+    if (S.accounts[0]) S.acct = S.accounts[0].id;
+
+    function acctObj() {
+      return S.accounts.filter(function (a) { return a.id === S.acct; })[0];
+    }
+    function say(t, kind) {
+      var el = document.getElementById("tpPayMsg");
+      if (el) { el.textContent = t || ""; el.className = "tp-pay-msg" + (kind ? " " + kind : ""); }
+    }
+    function recheck() {
+      var a = acctObj();
+      if (!S.fields || !a || !window.VeyoraSlip) { S.checks = []; return; }
+      S.checks = window.VeyoraSlip.check(S.fields, {
+        amount: S.due,
+        currency: S.currency,
+        account_no: a.account_no,
+        bank: a.bank,
+        createdAt: S.booking.created_at,
+        amountLabel: "amount due",
+        matchLabel: "covers the outstanding balance.",
+        beforeLabel: "this booking was created.",
+        afterLabel: "Transfer made after the booking was created."
+      });
+    }
+    function fieldsHtml() {
+      var f = S.fields;
+      if (!f) return "";
+      function inp(k, label, ph) {
+        return '<label class="tp-fld"><span>' + label + '</span><input data-f="' + k + '" value="' + esc(f[k] || "") + '" placeholder="' + ph + '" autocomplete="off"></label>';
+      }
+      return '<div class="tp-read"><h3>What we read on your slip <small>' + esc([f.bank, f.transaction_type].filter(Boolean).join(" · ") || "Fix anything that is wrong") + '</small></h3><div class="tp-fields">' +
+        inp("amount", "Amount", "0.00") + inp("to_account", "Paid to account", "Account number") +
+        inp("reference_no", "Reference", "Reference or Id#") + inp("transaction_date", "Date and time", "YYYY-MM-DD HH:MM:SS") +
+        '<label class="tp-fld"><span>Status</span><select data-f="status"><option value="">Not read</option><option value="SUCCESS"' + (/succ|compl/i.test(f.status || "") ? " selected" : "") + '>Success</option><option value="FAILED"' + (/fail/i.test(f.status || "") ? " selected" : "") + '>Failed</option></select></label>' +
+        '<label class="tp-fld"><span>Bank</span><input data-f="bank" value="' + esc(f.bank || "") + '" placeholder="MIB or BML" autocomplete="off"></label></div><div id="tpChecks"></div></div>';
+    }
+    function paintChecks() {
+      var el = document.getElementById("tpChecks");
+      if (el) el.innerHTML = checksHtml(S.checks);
+      var btn = document.getElementById("tpPaySubmit");
+      if (btn) {
+        var v = S.checks.length && window.VeyoraSlip ? window.VeyoraSlip.verdict(S.checks) : "none";
+        btn.disabled = S.busy || !S.file || v === "rejected" || v === "none";
+        btn.textContent = v === "rejected" ? "Fix the problems above" : v === "review" ? "Submit for review" : "Submit slip";
+      }
+    }
+    function drawPay() {
+      panel.innerHTML =
+        (S.accounts.length
+          ? '<h3 class="tp-pay-h">1. Transfer to this company account</h3><div class="tp-accts" role="radiogroup">' + S.accounts.map(function (x) {
+              return '<div class="tp-acct' + (x.id === S.acct ? " on" : "") + '" role="radio" tabindex="0" data-acct="' + esc(x.id) + '">' +
+                '<span class="tp-bk">' + ic(ICO.bank) + '</span><span class="tp-ai"><strong>' + esc(x.bank) + '</strong><small>' + esc(x.account_name) + '</small><code>' + esc(x.account_no) + '</code>' +
+                (x.note ? '<em>' + esc(x.note) + '</em>' : "") + '</span>' +
+                '<button type="button" class="tp-copy" data-copy="' + esc(x.account_no) + '">' + ic(ICO.copy) + '<span>Copy</span></button></div>';
+            }).join("") + "</div>"
+          : '<p class="tp-pay-none">This company has not published a receiving account yet. Contact the operator to pay.</p>') +
+        '<h3 class="tp-pay-h">2. Upload your transfer slip</h3>' +
+        '<label class="tp-drop" id="tpDrop"><input type="file" id="tpFile" accept="image/png,image/jpeg,image/webp">' +
+          '<span>' + ic(ICO.up) + '</span><strong>' + (S.file ? "Choose a different slip" : "Drop your slip here or click to choose") + '</strong>' +
+          '<small>Screenshot or photo · PNG, JPG or WebP · up to 8 MB</small></label>' +
+        '<div id="tpReadBox">' + (S.preview ? '<div class="tp-prev"><img src="' + esc(S.preview) + '" alt="Your slip"><div class="tp-prog" id="tpProg"' + (S.reading ? "" : " hidden") + '><i style="width:' + Math.round((S.reading || 0) * 100) + '%"></i><span>Reading your slip…</span></div></div>' : "") +
+          fieldsHtml() + "</div>" +
+        '<button type="button" class="tp-pay-cta" id="tpPaySubmit" disabled>Submit slip</button>' +
+        '<p class="tp-pay-msg" id="tpPayMsg" role="status"></p>';
+
+      paintChecks();
+      [].forEach.call(panel.querySelectorAll("[data-acct]"), function (el) {
+        el.addEventListener("click", function (e) {
+          if (e.target.closest("[data-copy]")) return;
+          S.acct = el.getAttribute("data-acct");
+          recheck();
+          drawPay();
+        });
+      });
+      [].forEach.call(panel.querySelectorAll("[data-copy]"), function (b) {
+        b.addEventListener("click", function () {
+          var t = b.getAttribute("data-copy");
+          var done = function () { b.classList.add("ok"); b.querySelector("span").textContent = "Copied"; setTimeout(function () { b.classList.remove("ok"); b.querySelector("span").textContent = "Copy"; }, 1200); };
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, done); else done();
+        });
+      });
+      var drop = document.getElementById("tpDrop"), file = document.getElementById("tpFile");
+      if (drop && file) {
+        ["dragover", "dragenter"].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add("over"); }); });
+        ["dragleave", "drop"].forEach(function (ev) { drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove("over"); }); });
+        drop.addEventListener("drop", function (e) { if (e.dataTransfer && e.dataTransfer.files[0]) takeFile(e.dataTransfer.files[0]); });
+        file.addEventListener("change", function () { if (file.files[0]) takeFile(file.files[0]); });
+      }
+      [].forEach.call(panel.querySelectorAll("[data-f]"), function (el) {
+        el.addEventListener("input", function () { S.fields[el.getAttribute("data-f")] = el.value.trim(); recheck(); paintChecks(); });
+        el.addEventListener("change", function () { S.fields[el.getAttribute("data-f")] = el.value.trim(); recheck(); paintChecks(); });
+      });
+      var sub = document.getElementById("tpPaySubmit");
+      if (sub) sub.addEventListener("click", submit);
+    }
+
+    function takeFile(f) {
+      if (!/^image\/(png|jpeg|webp)$/.test(f.type)) { say("Use a PNG, JPG or WebP image of the slip.", "err"); return; }
+      if (f.size > 8 * 1024 * 1024) { say("That image is over 8 MB.", "err"); return; }
+      S.file = f; S.fields = null; S.checks = []; S.reading = 0.02;
+      try { if (S.preview) URL.revokeObjectURL(S.preview); } catch (e) {}
+      S.preview = URL.createObjectURL(f);
+      drawPay();
+      slipLib().then(function (L) {
+        return L.read(f, function (p) {
+          S.reading = Math.max(0.05, p);
+          var bar = document.querySelector("#tpProg i");
+          if (bar) bar.style.width = Math.round(p * 100) + "%";
+        });
+      }).then(function (res) {
+        S.reading = 0; S.fields = res.fields; recheck(); drawPay();
+        if (!S.fields.amount && !S.fields.reference_no && !S.fields.to_account) {
+          say("We could not read this image. Try a clearer screenshot of the slip.", "err");
+        }
+      }, function (e) {
+        S.reading = 0; S.fields = {}; recheck(); drawPay();
+        say((e && e.message) || "Could not read the slip. Fill the details in by hand.", "err");
+      });
+    }
+
+    function submit() {
+      if (S.busy || !S.file || !S.fields || !S.acct) return;
+      if (!S.booking.id || !S.company.id) { say("Ticket details are incomplete. Refresh and try again.", "err"); return; }
+      S.busy = true; paintChecks(); say("Uploading your slip…");
+      var ext = S.file.type === "image/png" ? "png" : S.file.type === "image/webp" ? "webp" : "jpg";
+      var path = S.company.id + "/" + S.booking.id + "/" + Date.now() + "." + ext;
+      Promise.resolve(db.storage.from("booking-slips").upload(path, S.file, { contentType: S.file.type, upsert: false })).then(function (up) {
+        if (up.error) throw new Error(up.error.message);
+        return db.rpc("public_ticket_submit_slip", {
+          p_ref: ref,
+          p_token: token,
+          p_account: S.acct,
+          p_path: path,
+          p_ocr: S.fields
+        });
+      }).then(function (r) {
+        S.busy = false;
+        if (r.error) { say(r.error.message, "err"); paintChecks(); return; }
+        var out = r.data || {};
+        if (out.applied) {
+          say("Payment verified. Reloading your ticket…", "ok");
+          setTimeout(function () { reload(); }, 1200);
+          return;
+        }
+        panel.innerHTML = '<div class="tp-pay-res ' + esc(out.slip_status || "") + '"><strong>' +
+          (out.slip_status === "review" ? "Slip received for review" : out.slip_status === "rejected" ? "Slip not accepted" : "Slip received") +
+          '</strong><span>' +
+          (out.slip_status === "review" ? "Some details need a person to check. The company will update this ticket soon." :
+            out.slip_status === "rejected" ? "Fix the problems below and try again with the correct company account." : "Thank you.") +
+          '</span></div>' + checksHtml(out.checks || []) +
+          (out.slip_status === "rejected" ? '<button type="button" class="tp-pay-cta" id="tpPayRetry">Upload another slip</button>' : "");
+        var retry = document.getElementById("tpPayRetry");
+        if (retry) retry.addEventListener("click", function () {
+          S.file = null; S.fields = null; S.checks = []; S.preview = ""; drawPay();
+        });
+      }, function (e) {
+        S.busy = false; say(e.message || "Upload failed.", "err"); paintChecks();
+      });
+    }
+
+    if (!S.accounts.length) {
+      panel.innerHTML = '<p class="tp-pay-none">This company has not published a receiving account yet. Ask the operator for their bank details.</p>';
+      return;
+    }
+    drawPay();
+  }
+
+  function reload() {
+    root.innerHTML = '<p class="tp-load">Opening your ticket…</p>';
+    loadTicket().then(function (r) {
+      if (r.error) {
+        var miss = /public_ticket_view|schema cache|does not exist/i.test(r.error.message || "");
+        msg("Could not open ticket", miss ? "Run migration 0154_public_ticket_pay_slip.sql, then try again." : r.error.message, "bad");
+        return;
+      }
+      render(r.data || {});
+    }, function (e) {
+      msg("Could not open ticket", (e && e.message) || "Try again later.", "bad");
+    });
+  }
+
+  reload();
 })();
 
   </script>
